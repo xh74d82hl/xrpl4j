@@ -99,4 +99,9 @@ public class TransactionTypeTests {
     assertThat(TransactionType.XCHAIN_MODIFY_BRIDGE.value()).isEqualTo("XChainModifyBridge");
     assertThat(TransactionType.UNKNOWN.value()).isEqualTo("Unknown");
   }
+
+  @Test
+  public void testOracleSetForValue() {
+    assertThat(TransactionType.forValue("OracleSet")).isEqualTo(TransactionType.ORACLE_SET);
+  }
 }
